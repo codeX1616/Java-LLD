@@ -1,4 +1,4 @@
-package com.lld.entities.vehicleEntities;
+package com.lld.carRentalSystem.entities.vehicleDetails;
 
 import lombok.Getter;
 import lombok.Setter;
