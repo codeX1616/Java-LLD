@@ -20,7 +20,8 @@ public class Store {
 
     public Reservation createReservation(Vehicle vehicle, User user) {
         Reservation reservation = new Reservation();
-        reservation.createReserve(user, vehicle);
+        int reservationId = reservation.createReserve(user, vehicle);
+        System.out.println("Reservation id is: " + reservationId);
         reservations.add(reservation);
         return reservation;
     }
