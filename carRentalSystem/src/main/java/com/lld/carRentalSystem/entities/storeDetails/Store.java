@@ -3,11 +3,18 @@ package com.lld.carRentalSystem.entities.storeDetails;
 import com.lld.carRentalSystem.entities.reservationDetails.Reservation;
 import com.lld.carRentalSystem.entities.reservationDetails.User;
 import com.lld.carRentalSystem.entities.vehicleDetails.Vehicle;
+import com.lld.carRentalSystem.entities.vehicleDetails.VehicleType;
 import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.util.List;
 
 @AllArgsConstructor
+@NoArgsConstructor
+@Getter
+@Setter
 public class Store {
     int storeId;
     VehicleInventoryManagement inventoryManagement;
@@ -30,4 +37,13 @@ public class Store {
         // Logic for completing reservation
         return true;
     }
+
+    public List<Vehicle> getVehicles(VehicleType type) {
+        return inventoryManagement.getVehicles();
+    }
+
+    public void setVehicles(List<Vehicle> vehicles) {
+        inventoryManagement = new VehicleInventoryManagement(vehicles);
+    }
+
 }
