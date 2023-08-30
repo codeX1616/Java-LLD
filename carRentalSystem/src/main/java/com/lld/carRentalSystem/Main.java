@@ -8,6 +8,7 @@ import com.lld.carRentalSystem.entities.storeDetails.Location;
 import com.lld.carRentalSystem.entities.storeDetails.Store;
 import com.lld.carRentalSystem.entities.vehicleDetails.Car;
 import com.lld.carRentalSystem.entities.vehicleDetails.Vehicle;
+import com.lld.carRentalSystem.entities.vehicleDetails.VehicleRentalSystem;
 import com.lld.carRentalSystem.entities.vehicleDetails.VehicleType;
 
 import java.util.ArrayList;
