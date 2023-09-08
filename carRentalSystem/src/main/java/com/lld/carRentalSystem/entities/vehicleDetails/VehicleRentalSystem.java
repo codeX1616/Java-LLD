@@ -12,6 +12,11 @@ public class VehicleRentalSystem {
     private List<Store> storeList;
     private List<User> userList;
 
+    /**
+     * Method to get store from store list
+     * @param location
+     * @return {@link Store}
+     */
     public Store getStore(Location location) {
         // Get store based on location
         return storeList.get(0);
