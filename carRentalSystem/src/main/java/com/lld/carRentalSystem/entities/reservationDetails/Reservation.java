@@ -26,6 +26,12 @@ public class Reservation {
     private ReservationStatus reservationStatus;
     private Location location;
 
+    /**
+     * Method to create reservation
+     * @param user
+     * @param vehicle
+     * @return
+     */
     public int createReserve(User user, Vehicle vehicle) {
         resId = 173;
         this.user = user;
