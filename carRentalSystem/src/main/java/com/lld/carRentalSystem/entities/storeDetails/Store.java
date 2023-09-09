@@ -9,6 +9,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @AllArgsConstructor
@@ -19,7 +20,7 @@ public class Store {
     int storeId;
     VehicleInventoryManagement inventoryManagement;
     Location storeLocation;
-    List<Reservation> reservations;
+    List<Reservation> reservations = new ArrayList<>();
 
     /**
      * Method to set inventory management with vehicle list
