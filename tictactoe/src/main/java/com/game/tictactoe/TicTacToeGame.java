@@ -8,10 +8,7 @@ import com.game.tictactoe.entities.piece.PlayingPieceO;
 import com.game.tictactoe.entities.piece.PlayingPieceX;
 import lombok.NoArgsConstructor;
 
-import java.util.Deque;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 @NoArgsConstructor
 public class TicTacToeGame {
@@ -52,7 +49,7 @@ public class TicTacToeGame {
 
             //get the free space from the board
             gameBoard.printBoard();
-            List<Pair<Integer, Integer>> freeSpaces =  gameBoard.getFreeCells();
+            Map<Integer, Integer> freeSpaces =  gameBoard.getFreeCells();
             if(freeSpaces.isEmpty()) {
                 noWinner = false;
                 continue;

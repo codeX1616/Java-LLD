@@ -7,7 +7,10 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -40,9 +43,25 @@ public class Board {
         }
     }
 
-    public List<Pair<Integer, Integer>>  getFreeCells() {
-        // TODO - Add logic to get free cells of board
-        return List.of();
+    /**
+     * Method to get free cells map
+     * @return
+     */
+    public Map<Integer, Integer>  getFreeCells() {
+        List<Pair<Integer, Integer>> freeCells = new ArrayList<>();
+        Map<Integer, Integer> rowColumn = new HashMap<>();
+
+        for (int i = 0; i < size; i++) {
+            for (int j = 0; j < size; j++) {
+                if (board[i][j] == null) {
+                    rowColumn = Map.ofEntries(
+                            Map.entry(i, j)
+                    );
+                }
+            }
+        }
+
+        return rowColumn;
     }
 
     public boolean addPiece(long inputRow, long inputColumn, PlayingPiece playingPiece) {
