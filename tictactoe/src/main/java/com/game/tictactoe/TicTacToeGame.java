@@ -1,14 +1,17 @@
 package com.game.tictactoe;
 
-import ch.qos.logback.core.joran.sanity.Pair;
 import com.game.tictactoe.entities.Board;
 import com.game.tictactoe.entities.Player;
+import com.game.tictactoe.entities.piece.PieceType;
 import com.game.tictactoe.entities.piece.PlayingPiece;
 import com.game.tictactoe.entities.piece.PlayingPieceO;
 import com.game.tictactoe.entities.piece.PlayingPieceX;
 import lombok.NoArgsConstructor;
 
-import java.util.*;
+import java.util.Deque;
+import java.util.LinkedList;
+import java.util.Map;
+import java.util.Scanner;
 
 @NoArgsConstructor
 public class TicTacToeGame {
@@ -60,8 +63,8 @@ public class TicTacToeGame {
             Scanner inputScanner = new Scanner(System.in);
             String s = inputScanner.nextLine();
             String[] values = s.split(",");
-            long inputRow = Integer.valueOf(values[0]);
-            long inputColumn = Integer.valueOf(values[1]);
+            int inputRow = Integer.valueOf(values[0]);
+            int inputColumn = Integer.valueOf(values[1]);
 
             //place the piece
             boolean pieceAddedSuccessfully = gameBoard.addPiece(inputRow,inputColumn, playerTurn.playingPiece);
@@ -73,7 +76,7 @@ public class TicTacToeGame {
             }
             players.addLast(playerTurn);
 
-            boolean winner = isThereWinner(inputRow, inputColumn, playerTurn.getPlayingPiece());
+            boolean winner = isThereWinner(inputRow, inputColumn, playerTurn.getPlayingPiece().pieceType);
             if(winner) {
                 return playerTurn.name;
             }
@@ -83,8 +86,41 @@ public class TicTacToeGame {
 
     }
 
-    private boolean isThereWinner(long inputRow, long inputColumn, PlayingPiece playingPiece) {
-        // TODO - Add logic for checking winner
-        return false;
+    private boolean isThereWinner(int row, int column, PieceType pieceType) {
+
+        boolean rowMatch = true;
+        boolean columnMatch = true;
+        boolean diagonalMatch = true;
+        boolean antiDiagonalMatch = true;
+
+        //need to check in row
+        for(int i=0;i<gameBoard.size;i++) {
+            if(gameBoard.board[row][i] == null || gameBoard.board[row][i].pieceType != pieceType) {
+                rowMatch = false;
+            }
+        }
+
+        //need to check in column
+        for(int i=0;i<gameBoard.size;i++) {
+            if(gameBoard.board[i][column] == null || gameBoard.board[i][column].pieceType != pieceType) {
+                columnMatch = false;
+            }
+        }
+
+        //need to check diagonals
+        for(int i=0, j=0; i<gameBoard.size;i++,j++) {
+            if (gameBoard.board[i][j] == null || gameBoard.board[i][j].pieceType != pieceType) {
+                diagonalMatch = false;
+            }
+        }
+
+        //need to check anti-diagonals
+        for(int i=0, j=gameBoard.size-1; i<gameBoard.size;i++,j--) {
+            if (gameBoard.board[i][j] == null || gameBoard.board[i][j].pieceType != pieceType) {
+                antiDiagonalMatch = false;
+            }
+        }
+
+        return rowMatch || columnMatch || diagonalMatch || antiDiagonalMatch;
     }
 }
