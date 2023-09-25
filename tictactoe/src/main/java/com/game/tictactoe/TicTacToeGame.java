@@ -86,6 +86,13 @@ public class TicTacToeGame {
 
     }
 
+    /**
+     * Method to decide if there is a winner
+     * @param row {@link int}
+     * @param column {@link int}
+     * @param pieceType {@link PieceType}
+     * @return boolean
+     */
     private boolean isThereWinner(int row, int column, PieceType pieceType) {
 
         boolean rowMatch = true;
