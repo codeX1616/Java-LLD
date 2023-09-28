@@ -41,7 +41,7 @@ public class TicTacToeGame {
 
     /**
      * Method to start tic-tac-toe game
-     * @return
+     * @return {@link String}
      */
     public String startGame() {
         boolean noWinner = true;
