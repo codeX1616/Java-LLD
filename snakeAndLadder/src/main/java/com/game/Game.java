@@ -67,7 +67,7 @@ public class Game {
 
     /**
      * Method to check jump operation
-     * @param playerNewPosition
+     * @param playerNewPosition {@link int}
      */
     private int jumpCheck(int playerNewPosition) {
         if (playerNewPosition > board.getCells().length - 1)

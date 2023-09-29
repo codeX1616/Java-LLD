@@ -10,9 +10,9 @@ public class Board {
 
     /**
      * Snake and Ladder Board initializer constructor
-     * @param boardSize
-     * @param numberOfSnakes
-     * @param numberOfLadders
+     * @param boardSize {@link int}
+     * @param numberOfSnakes {@link int}
+     * @param numberOfLadders {@link int}
      */
     public Board(int boardSize, int numberOfSnakes, int numberOfLadders) {
         System.out.println("Initializing cells");
@@ -22,7 +22,7 @@ public class Board {
 
     /**
      * Initialize empty board cells
-     * @param boardSize
+     * @param boardSize {@link int}
      */
     private void initializeCells(int boardSize) {
         cells = new Cell[boardSize][boardSize];
@@ -33,9 +33,9 @@ public class Board {
 
     /**
      * Add snakes and ladders to board cells
-     * @param cells
-     * @param numberOfSnakes
-     * @param numberOfLadders
+     * @param cells {@link Cell}
+     * @param numberOfSnakes {@link int}
+     * @param numberOfLadders {@link int}
      */
     private void addSnakesAndLadders(Cell[][] cells, int numberOfSnakes, int numberOfLadders) {
         System.out.println("Adding snakes and ladders to the board");
@@ -71,7 +71,7 @@ public class Board {
 
     /**
      * Method to get cell object from player position
-     * @param playerPosition
+     * @param playerPosition {@link int}
      */
     public Cell getCell(int playerPosition) {
         int boardRow = playerPosition / cells.length;

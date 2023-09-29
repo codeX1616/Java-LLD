@@ -14,7 +14,7 @@ public class Dice {
 
     /**
      * Method to calculate total sum of all dice values when rolling dice
-     * @return
+     * @return {@link int}
      */
     public int rollDice() {
         int totalSum = 0;
