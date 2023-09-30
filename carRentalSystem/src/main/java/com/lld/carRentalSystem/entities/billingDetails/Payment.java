@@ -4,7 +4,7 @@ public class Payment {
 
     /**
      * Method to perform bill payment
-     * @param bill
+     * @param bill {@link Bill}
      */
     public void payBill(Bill bill) {
         // Perform payment process
