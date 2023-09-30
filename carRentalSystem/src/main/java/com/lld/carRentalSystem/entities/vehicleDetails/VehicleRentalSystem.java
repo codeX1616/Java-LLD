@@ -14,7 +14,7 @@ public class VehicleRentalSystem {
 
     /**
      * Method to get store from store list
-     * @param location
+     * @param location {@link Location}
      * @return {@link Store}
      */
     public Store getStore(Location location) {

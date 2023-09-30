@@ -24,7 +24,7 @@ public class Store {
 
     /**
      * Method to set inventory management with vehicle list
-     * @param vehicleList
+     * @param vehicleList {@link List<Vehicle>}
      */
     public void setInventoryManagement(List<Vehicle> vehicleList) {
         this.inventoryManagement = new VehicleInventoryManagement(vehicleList);
