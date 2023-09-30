@@ -32,8 +32,8 @@ public class Store {
 
     /**
      * MEthod for creating reservation
-     * @param vehicle
-     * @param user
+     * @param vehicle {@link Vehicle}
+     * @param user {@link User}
      * @return {@link Reservation}
      */
     public Reservation createReservation(Vehicle vehicle, User user) {
@@ -46,8 +46,8 @@ public class Store {
 
     /**
      * Method to complete reservation
-     * @param reservationId
-     * @return
+     * @param reservationId {@link int}
+     * @return {@link boolean}
      */
     public boolean completeReservation(int reservationId) {
         // Logic for completing reservation
@@ -56,7 +56,7 @@ public class Store {
 
     /**
      * Get vehicles from inventory management
-     * @param type
+     * @param type {@link VehicleType}
      * @return {@link List<Vehicle>}
      */
     public List<Vehicle> getVehicles(VehicleType type) {
@@ -65,7 +65,7 @@ public class Store {
 
     /**
      * Method to set vehicle list to inventory management
-     * @param vehicles
+     * @param vehicles {@link List<Vehicle>}
      */
     public void setVehicles(List<Vehicle> vehicles) {
         inventoryManagement = new VehicleInventoryManagement(vehicles);
