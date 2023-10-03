@@ -1,4 +1,4 @@
-package com.app.bookMyShow.entity;
+package com.app.bookMyShow.entity.enums;
 
 public enum City {
     Bangalore,
