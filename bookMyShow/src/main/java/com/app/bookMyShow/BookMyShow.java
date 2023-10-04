@@ -2,7 +2,11 @@ package com.app.bookMyShow;
 
 import com.app.bookMyShow.controller.MovieController;
 import com.app.bookMyShow.controller.TheatreController;
-import com.app.bookMyShow.entity.*;
+import com.app.bookMyShow.entity.Movie;
+import com.app.bookMyShow.entity.Screen;
+import com.app.bookMyShow.entity.Seat;
+import com.app.bookMyShow.entity.Show;
+import com.app.bookMyShow.entity.Theatre;
 import com.app.bookMyShow.entity.enums.City;
 
 import java.util.ArrayList;
