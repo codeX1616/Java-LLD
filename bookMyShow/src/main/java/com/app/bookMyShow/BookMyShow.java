@@ -1,5 +1,7 @@
 package com.app.bookMyShow;
 
+import com.app.bookMyShow.controller.MovieController;
+import com.app.bookMyShow.controller.TheatreController;
 import com.app.bookMyShow.entity.*;
 import com.app.bookMyShow.entity.enums.City;
 
@@ -7,7 +9,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BookMyShow {
-    
+
+    private MovieController movieController;
+    private TheatreController theatreController;
+
     public static void main(String args[]) {
         BookMyShow bms = new BookMyShow();
         bms.initialize();
