@@ -1,8 +1,7 @@
 package com.app.bookMyShow;
 
+import com.app.bookMyShow.entity.*;
 import com.app.bookMyShow.entity.enums.City;
-import com.app.bookMyShow.entity.Screen;
-import com.app.bookMyShow.entity.Seat;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,7 +25,41 @@ public class BookMyShow {
         createTheatre();
     }
 
-    private void createTheatre() {}
+    private void createTheatre() {
+        Movie avengerMovie = movieController.getMovieByName("AVENGERS");
+        Movie baahubali = movieController.getMovieByName("BAAHUBALI");
+
+        Theatre inoxTheatre = new Theatre();
+        inoxTheatre.setTheatreId(1);
+        inoxTheatre.setScreen(createScreen());
+        inoxTheatre.setCity(City.Bangalore);
+        List<Show> inoxShows = new ArrayList<>();
+        Show inoxMorningShow = createShows(1, inoxTheatre.getScreen().get(0), avengerMovie, 8);
+        Show inoxEveningShow = createShows(2, inoxTheatre.getScreen().get(0), baahubali, 16);
+        inoxShows.add(inoxMorningShow);
+        inoxShows.add(inoxEveningShow);
+        inoxTheatre.setShows(inoxShows);
+
+
+        Theatre pvrTheatre = new Theatre();
+        pvrTheatre.setTheatreId(2);
+        pvrTheatre.setScreen(createScreen());
+        pvrTheatre.setCity(City.Delhi);
+        List<Show> pvrShows = new ArrayList<>();
+        Show pvrMorningShow = createShows(3, pvrTheatre.getScreen().get(0), avengerMovie, 13);
+        Show pvrEveningShow = createShows(4, pvrTheatre.getScreen().get(0), baahubali, 20);
+        pvrShows.add(pvrMorningShow);
+        pvrShows.add(pvrEveningShow);
+        pvrTheatre.setShows(pvrShows);
+
+        theatreController.addTheatre(inoxTheatre, City.Bangalore);
+        theatreController.addTheatre(pvrTheatre, City.Delhi);
+
+    }
+
+    private Show createShows(int i, Screen screen, Movie avengerMovie, int i1) {
+        return null;
+    }
 
     private void createMovies() {}
 
