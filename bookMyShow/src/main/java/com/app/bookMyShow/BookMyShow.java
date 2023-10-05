@@ -8,6 +8,7 @@ import com.app.bookMyShow.entity.Seat;
 import com.app.bookMyShow.entity.Show;
 import com.app.bookMyShow.entity.Theatre;
 import com.app.bookMyShow.entity.enums.City;
+import com.app.bookMyShow.entity.enums.SeatCategory;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -124,8 +125,31 @@ public class BookMyShow {
     }
 
     private List<Seat> createSeats() {
-        // TODO - Add logic to create seats
-        return null;
+        List<Seat> seats = new ArrayList<>();
+
+        for (int i = 0; i < 40; i++) {
+            Seat seat = new Seat();
+            seat.setSeatId((long) i);
+            seat.setSeatCategory(SeatCategory.SILVER);
+            seats.add(seat);
+        }
+
+        for (int i = 40; i < 70; i++) {
+            Seat seat = new Seat();
+            seat.setSeatId((long) i);
+            seat.setSeatCategory(SeatCategory.GOLD);
+            seats.add(seat);
+        }
+
+        for (int i = 70; i < 100; i++) {
+            Seat seat = new Seat();
+            seat.setSeatId((long) i);
+            seat.setSeatCategory(SeatCategory.PLATINUM);
+            seats.add(seat);
+        }
+
+        return seats;
+
     }
 
 
