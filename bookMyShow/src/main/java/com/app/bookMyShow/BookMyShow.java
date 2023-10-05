@@ -43,8 +43,8 @@ public class BookMyShow {
         inoxTheatre.setScreen(createScreen());
         inoxTheatre.setCity(City.Bangalore);
         List<Show> inoxShows = new ArrayList<>();
-        Show inoxMorningShow = createShows(1, inoxTheatre.getScreen().get(0), avengerMovie, 8);
-        Show inoxEveningShow = createShows(2, inoxTheatre.getScreen().get(0), baahubali, 16);
+        Show inoxMorningShow = createShows(1L, inoxTheatre.getScreen().get(0), avengerMovie, 8L);
+        Show inoxEveningShow = createShows(2L, inoxTheatre.getScreen().get(0), baahubali, 16L);
         inoxShows.add(inoxMorningShow);
         inoxShows.add(inoxEveningShow);
         inoxTheatre.setShows(inoxShows);
@@ -55,8 +55,8 @@ public class BookMyShow {
         pvrTheatre.setScreen(createScreen());
         pvrTheatre.setCity(City.Delhi);
         List<Show> pvrShows = new ArrayList<>();
-        Show pvrMorningShow = createShows(3, pvrTheatre.getScreen().get(0), avengerMovie, 13);
-        Show pvrEveningShow = createShows(4, pvrTheatre.getScreen().get(0), baahubali, 20);
+        Show pvrMorningShow = createShows(3L, pvrTheatre.getScreen().get(0), avengerMovie, 13L);
+        Show pvrEveningShow = createShows(4L, pvrTheatre.getScreen().get(0), baahubali, 20L);
         pvrShows.add(pvrMorningShow);
         pvrShows.add(pvrEveningShow);
         pvrTheatre.setShows(pvrShows);
@@ -66,11 +66,36 @@ public class BookMyShow {
 
     }
 
-    private Show createShows(int i, Screen screen, Movie avengerMovie, int i1) {
-        return null;
+    private Show createShows(Long showId, Screen screen, Movie movie, Long showStartTime) {
+        Show show = new Show();
+        show.setShowId(showId);
+        show.setScreen(screen);
+        show.setMovie(movie);
+        show.setShowStartTime(showStartTime); //24 hrs time ex: 14 means 2pm and 8 means 8AM
+        return show;
+
     }
 
-    private void createMovies() {}
+    private void createMovies() {
+        Movie avengers = new Movie();
+        avengers.setMovieId(1);
+        avengers.setMovieName("AVENGERS");
+        avengers.setMovieDuration(128);
+
+        //create Movies2
+        Movie baahubali = new Movie();
+        baahubali.setMovieId(2);
+        baahubali.setMovieName("BAAHUBALI");
+        baahubali.setMovieDuration(180);
+
+
+        //add movies against the cities
+        movieController.addMovie(avengers, City.Bangalore);
+        movieController.addMovie(avengers, City.Delhi);
+        movieController.addMovie(baahubali, City.Bangalore);
+        movieController.addMovie(baahubali, City.Delhi);
+
+    }
 
     private List<Screen> createScreen() {
 
