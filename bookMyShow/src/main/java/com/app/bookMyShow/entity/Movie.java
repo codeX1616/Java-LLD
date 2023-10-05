@@ -9,4 +9,8 @@ public class Movie {
     int movieId;
     String movieName;
     int movieDurationInMinutes;
+
+    public void setMovieDuration(int i) {
+
+    }
 }

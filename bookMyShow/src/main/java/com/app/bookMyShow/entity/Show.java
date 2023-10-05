@@ -9,10 +9,10 @@ import java.util.List;
 @Getter
 @Setter
 public class Show {
-    int showId;
+    Long showId;
     Movie movie;
     Screen screen;
-    int showStartTime;
+    Long showStartTime;
     List<Integer> bookedSeatIds = new ArrayList<>();
 
 }
