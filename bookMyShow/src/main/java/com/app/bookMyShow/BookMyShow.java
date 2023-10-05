@@ -124,6 +124,10 @@ public class BookMyShow {
         return screens;
     }
 
+    /**
+     * Method to create seats
+     * @return
+     */
     private List<Seat> createSeats() {
         List<Seat> seats = new ArrayList<>();
 
