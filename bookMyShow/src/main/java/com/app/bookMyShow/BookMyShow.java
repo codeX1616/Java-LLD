@@ -34,6 +34,9 @@ public class BookMyShow {
         createTheatre();
     }
 
+    /**
+     * Method to create a theatre
+     */
     private void createTheatre() {
         Movie avengerMovie = movieController.getMovieByName("AVENGERS");
         Movie baahubali = movieController.getMovieByName("BAAHUBALI");
@@ -66,30 +69,38 @@ public class BookMyShow {
 
     }
 
+    /**
+     * Method to create movie shows
+     * @param showId
+     * @param screen
+     * @param movie
+     * @param showStartTime
+     * @return
+     */
     private Show createShows(Long showId, Screen screen, Movie movie, Long showStartTime) {
         Show show = new Show();
         show.setShowId(showId);
         show.setScreen(screen);
         show.setMovie(movie);
-        show.setShowStartTime(showStartTime); //24 hrs time ex: 14 means 2pm and 8 means 8AM
+        show.setShowStartTime(showStartTime);
         return show;
 
     }
 
+    /**
+     * Method to create movies
+     */
     private void createMovies() {
         Movie avengers = new Movie();
         avengers.setMovieId(1);
         avengers.setMovieName("AVENGERS");
         avengers.setMovieDuration(128);
 
-        //create Movies2
         Movie baahubali = new Movie();
         baahubali.setMovieId(2);
         baahubali.setMovieName("BAAHUBALI");
         baahubali.setMovieDuration(180);
 
-
-        //add movies against the cities
         movieController.addMovie(avengers, City.Bangalore);
         movieController.addMovie(avengers, City.Delhi);
         movieController.addMovie(baahubali, City.Bangalore);
@@ -97,6 +108,10 @@ public class BookMyShow {
 
     }
 
+    /**
+     * Method to create screen
+     * @return
+     */
     private List<Screen> createScreen() {
 
         List<Screen> screens = new ArrayList<>();
