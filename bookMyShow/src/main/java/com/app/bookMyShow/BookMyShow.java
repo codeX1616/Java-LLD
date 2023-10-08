@@ -2,16 +2,13 @@ package com.app.bookMyShow;
 
 import com.app.bookMyShow.controller.MovieController;
 import com.app.bookMyShow.controller.TheatreController;
-import com.app.bookMyShow.entity.Movie;
-import com.app.bookMyShow.entity.Screen;
-import com.app.bookMyShow.entity.Seat;
-import com.app.bookMyShow.entity.Show;
-import com.app.bookMyShow.entity.Theatre;
+import com.app.bookMyShow.entity.*;
 import com.app.bookMyShow.entity.enums.City;
 import com.app.bookMyShow.entity.enums.SeatCategory;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 public class BookMyShow {
 
@@ -26,8 +23,49 @@ public class BookMyShow {
         bms.createBooking(City.Delhi, "OMG2");
     }
 
-    private void createBooking(City city, String movie) {
-        // TODO - add logic to create movie booking for a city
+    private void createBooking(City userCity, String movieName) {
+        //1. search movie by my location
+        List<Movie> movies = movieController.getMoviesByCity(userCity);
+
+        //2. select the movie to watch.
+        Movie interestedMovie = null;
+        for (Movie movie : movies) {
+
+            if ((movie.getMovieName()).equals(movieName)) {
+                interestedMovie = movie;
+            }
+        }
+
+        //3. get all show of this movie in Bangalore location
+        Map<Theatre, List<Show>> showsTheatreWise = theatreController.getAllShow(interestedMovie, userCity);
+
+        //4. select the particular show user is interested in
+        Map.Entry<Theatre,List<Show>> entry = showsTheatreWise.entrySet().iterator().next();
+        List<Show> runningShows = entry.getValue();
+        Show interestedShow = runningShows.get(0);
+
+        //5. select the seat
+        int seatNumber = 30;
+        List<Integer> bookedSeats = interestedShow.getBookedSeatIds();
+        if(!bookedSeats.contains(seatNumber)){
+            bookedSeats.add(seatNumber);
+            //startPayment
+            Booking booking = new Booking();
+            List<Seat> myBookedSeats = new ArrayList<>();
+            for(Seat screenSeat : interestedShow.getScreen().getSeats()) {
+                if(screenSeat.getSeatId() == seatNumber) {
+                    myBookedSeats.add(screenSeat);
+                }
+            }
+            booking.setBookedSeats(myBookedSeats);
+            booking.setShow(interestedShow);
+        } else {
+            //throw exception
+            System.out.println("seat already booked, try again");
+            return;
+        }
+
+        System.out.println("BOOKING SUCCESSFUL");
     }
 
     private void initialize() {
