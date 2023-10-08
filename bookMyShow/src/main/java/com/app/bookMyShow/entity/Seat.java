@@ -1,17 +1,13 @@
 package com.app.bookMyShow.entity;
 
 import com.app.bookMyShow.entity.enums.SeatCategory;
+import lombok.Getter;
+import lombok.Setter;
 
+@Getter
+@Setter
 public class Seat {
-    int seatId;
+    Long seatId;
     int row;
     SeatCategory seatCategory;
-
-    public void setSeatId(Long i) {
-
-    }
-
-    public void setSeatCategory(SeatCategory seatCategory) {
-
-    }
 }
