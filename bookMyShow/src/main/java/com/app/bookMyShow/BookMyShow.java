@@ -23,7 +23,11 @@ public class BookMyShow {
         bms.createBooking(City.Delhi, "OMG2");
     }
 
-
+    /**
+     * Method to create booking
+     * @param userCity {@link City}
+     * @param movieName {@link String}
+     */
     private void createBooking(City userCity, String movieName) {
         //1. search movie by my location
         List<Movie> movies = movieController.getMoviesByCity(userCity);
