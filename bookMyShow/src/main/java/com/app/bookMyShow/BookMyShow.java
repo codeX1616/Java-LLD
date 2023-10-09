@@ -23,6 +23,7 @@ public class BookMyShow {
         bms.createBooking(City.Delhi, "OMG2");
     }
 
+
     private void createBooking(City userCity, String movieName) {
         //1. search movie by my location
         List<Movie> movies = movieController.getMoviesByCity(userCity);
@@ -68,6 +69,9 @@ public class BookMyShow {
         System.out.println("BOOKING SUCCESSFUL");
     }
 
+    /**
+     * Method to initialize book my show application
+     */
     private void initialize() {
         createMovies();
         createTheatre();
@@ -110,10 +114,10 @@ public class BookMyShow {
 
     /**
      * Method to create movie shows
-     * @param showId
-     * @param screen
-     * @param movie
-     * @param showStartTime
+     * @param showId {@link Long}
+     * @param screen {@link Screen}
+     * @param movie {@link Movie}
+     * @param showStartTime {@link Long}
      * @return
      */
     private Show createShows(Long showId, Screen screen, Movie movie, Long showStartTime) {
@@ -149,7 +153,7 @@ public class BookMyShow {
 
     /**
      * Method to create screen
-     * @return
+     * @return {@link List<Screen>}
      */
     private List<Screen> createScreen() {
 
@@ -164,7 +168,7 @@ public class BookMyShow {
 
     /**
      * Method to create seats
-     * @return
+     * @return {@link List<Seat>}
      */
     private List<Seat> createSeats() {
         List<Seat> seats = new ArrayList<>();
