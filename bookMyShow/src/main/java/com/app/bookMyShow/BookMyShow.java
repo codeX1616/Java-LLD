@@ -138,18 +138,18 @@ public class BookMyShow {
      * Method to create movies
      */
     private void createMovies() {
-        Movie avengers = new Movie();
-        avengers.setMovieId(1);
-        avengers.setMovieName("AVENGERS");
-        avengers.setMovieDuration(128);
+        Movie movie = new Movie();
+        movie.setMovieId(1);
+        movie.setMovieName("AVENGERS");
+        movie.setMovieDurationInMinutes(128);
 
         Movie baahubali = new Movie();
         baahubali.setMovieId(2);
         baahubali.setMovieName("BAAHUBALI");
-        baahubali.setMovieDuration(180);
+        baahubali.setMovieDurationInMinutes(180);
 
-        movieController.addMovie(avengers, City.Bangalore);
-        movieController.addMovie(avengers, City.Delhi);
+        movieController.addMovie(movie, City.Bangalore);
+        movieController.addMovie(movie, City.Delhi);
         movieController.addMovie(baahubali, City.Bangalore);
         movieController.addMovie(baahubali, City.Delhi);
 
