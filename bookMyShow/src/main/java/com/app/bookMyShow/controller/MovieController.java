@@ -25,7 +25,10 @@ public class MovieController {
     }
 
     public void addMovie(Movie movie, City city) {
-        // TODO - Add logic to add movie
+        allMovies.add(movie);
+        List<Movie> movies = cityVsMovies.getOrDefault(city, new ArrayList<>());
+        movies.add(movie);
+        cityVsMovies.put(city, movies);
     }
 
     public List<Movie> getMoviesByCity(City userCity) {
