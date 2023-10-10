@@ -20,8 +20,13 @@ public class MovieController {
 
 
     public Movie getMovieByName(String movieName) {
-        // TODO - add logic to get movie by name
+        for(Movie movie : allMovies) {
+            if((movie.getMovieName()).equals(movieName)) {
+                return movie;
+            }
+        }
         return null;
+
     }
 
     public void addMovie(Movie movie, City city) {
