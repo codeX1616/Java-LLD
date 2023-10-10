@@ -36,8 +36,7 @@ public class MovieController {
         cityVsMovies.put(city, movies);
     }
 
-    public List<Movie> getMoviesByCity(City userCity) {
-        // TODO - Add logic to get movies by city
-        return new ArrayList<>();
+    public List<Movie> getMoviesByCity(City city) {
+        return cityVsMovies.get(city);
     }
 }
