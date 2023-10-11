@@ -20,7 +20,6 @@ public class TheatreController {
         List<Theatre> theatres = cityVsTheatre.getOrDefault(city, new ArrayList<>());
         theatres.add(theatre);
         cityVsTheatre.put(city, theatres);
-
     }
 
     public Map<Theatre, List<Show>> getAllShow(Movie interestedMovie, City userCity) {
