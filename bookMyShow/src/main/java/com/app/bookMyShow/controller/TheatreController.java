@@ -15,6 +15,11 @@ public class TheatreController {
     Map<City, List<Theatre>> cityVsTheatre;
     List<Theatre> allTheatre;
 
+    /**
+     * Method to add theatre details
+     * @param theatre {@link Theatre}
+     * @param city {@link City}
+     */
     public void addTheatre(Theatre theatre, City city) {
         allTheatre.add(theatre);
 
@@ -23,6 +28,12 @@ public class TheatreController {
         cityVsTheatre.put(city, theatres);
     }
 
+    /**
+     * Method to get all show details
+     * @param movie {@link Movie}
+     * @param city {@link City}
+     * @return {@link Map}
+     */
     public Map<Theatre, List<Show>> getAllShow(Movie movie, City city) {
         Map<Theatre, List<Show>> theatreVsShows = new HashMap<>();
 
