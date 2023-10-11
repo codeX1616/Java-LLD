@@ -18,7 +18,11 @@ public class MovieController {
         allMovies = new ArrayList<>();
     }
 
-
+    /**
+     * Method to get movie by name
+     * @param movieName {@link String}
+     * @return {@link Movie}
+     */
     public Movie getMovieByName(String movieName) {
         for(Movie movie : allMovies) {
             if((movie.getMovieName()).equals(movieName)) {
@@ -26,9 +30,13 @@ public class MovieController {
             }
         }
         return null;
-
     }
 
+    /**
+     * Method to add movie details
+     * @param movie {@link Movie}
+     * @param city {@link City}
+     */
     public void addMovie(Movie movie, City city) {
         allMovies.add(movie);
         List<Movie> movies = cityVsMovies.getOrDefault(city, new ArrayList<>());
@@ -36,6 +44,11 @@ public class MovieController {
         cityVsMovies.put(city, movies);
     }
 
+    /**
+     * Method to get movies by city
+     * @param city {@link City}
+     * @return {@link List<Movie>}
+     */
     public List<Movie> getMoviesByCity(City city) {
         return cityVsMovies.get(city);
     }
