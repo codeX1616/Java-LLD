@@ -13,7 +13,7 @@ public class MovieController {
     Map<City, List<Movie>> cityVsMovies;
     List<Movie> allMovies;
 
-    MovieController(){
+    public MovieController(){
         cityVsMovies = new HashMap<>();
         allMovies = new ArrayList<>();
     }
