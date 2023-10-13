@@ -2,7 +2,12 @@ package com.app.bookMyShow;
 
 import com.app.bookMyShow.controller.MovieController;
 import com.app.bookMyShow.controller.TheatreController;
-import com.app.bookMyShow.entity.*;
+import com.app.bookMyShow.entity.Booking;
+import com.app.bookMyShow.entity.Movie;
+import com.app.bookMyShow.entity.Screen;
+import com.app.bookMyShow.entity.Seat;
+import com.app.bookMyShow.entity.Show;
+import com.app.bookMyShow.entity.Theatre;
 import com.app.bookMyShow.entity.enums.City;
 import com.app.bookMyShow.entity.enums.SeatCategory;
 
@@ -122,7 +127,7 @@ public class BookMyShow {
      * @param screen {@link Screen}
      * @param movie {@link Movie}
      * @param showStartTime {@link Long}
-     * @return
+     * @return {@link Show}
      */
     private Show createShows(Long showId, Screen screen, Movie movie, Long showStartTime) {
         Show show = new Show();
