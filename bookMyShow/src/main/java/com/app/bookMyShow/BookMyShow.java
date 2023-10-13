@@ -17,8 +17,13 @@ import java.util.Map;
 
 public class BookMyShow {
 
-    private MovieController movieController;
-    private TheatreController theatreController;
+    private final MovieController movieController;
+    private final TheatreController theatreController;
+
+    BookMyShow() {
+        this.movieController = new MovieController();
+        this.theatreController = new TheatreController();
+    }
 
     public static void main(String args[]) {
         BookMyShow bms = new BookMyShow();
