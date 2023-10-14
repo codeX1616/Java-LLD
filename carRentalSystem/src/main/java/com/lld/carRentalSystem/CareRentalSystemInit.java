@@ -14,9 +14,9 @@ import com.lld.carRentalSystem.entities.vehicleDetails.VehicleType;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Main {
+public class CareRentalSystemInit {
 
-    public static void main(String args[]) {
+    static {
         List<User> users = addUsers();
         List<Vehicle> vehicles = addVehicles();
         List<Store> stores = addStores(vehicles);
@@ -39,6 +39,7 @@ public class Main {
 
         store.completeReservation(reservation.getResId());
     }
+
 
     public static List<Vehicle> addVehicles(){
 
