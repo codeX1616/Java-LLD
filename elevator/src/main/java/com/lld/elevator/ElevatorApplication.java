@@ -8,6 +8,7 @@ public class ElevatorApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(ElevatorApplication.class, args);
+		ElevatorInitializer elevatorInitializer = new ElevatorInitializer();
 	}
 
 }

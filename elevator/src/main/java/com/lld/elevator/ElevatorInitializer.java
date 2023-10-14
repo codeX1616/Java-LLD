@@ -2,14 +2,15 @@ package com.lld.elevator;
 
 import com.lld.elevator.entities.Building;
 import com.lld.elevator.entities.Floor;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Main {
+@Service
+public class ElevatorInitializer {
 
-    public static void main(String args[]) {
-
+    public ElevatorInitializer() {
         List<Floor> floorList = new ArrayList<>();
         Floor floor1 = new Floor(1);
         Floor floor2 = new Floor(2);
