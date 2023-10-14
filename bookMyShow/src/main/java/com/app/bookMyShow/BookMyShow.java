@@ -17,20 +17,20 @@ import java.util.Map;
 
 public class BookMyShow {
 
+    static {
+        BookMyShow bms = new BookMyShow();
+        bms.initialize();
+
+        bms.createBooking(City.Bangalore, "Bahubali");
+        bms.createBooking(City.Delhi, "OMG2");
+    }
+
     private final MovieController movieController;
     private final TheatreController theatreController;
 
     BookMyShow() {
         this.movieController = new MovieController();
         this.theatreController = new TheatreController();
-    }
-
-    public static void main(String args[]) {
-        BookMyShow bms = new BookMyShow();
-        bms.initialize();
-
-        bms.createBooking(City.Bangalore, "Bahubali");
-        bms.createBooking(City.Delhi, "OMG2");
     }
 
     /**
