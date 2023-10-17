@@ -19,6 +19,12 @@ public class TicTacToeGame {
     Deque<Player> players;
     Board gameBoard;
 
+    static {
+        TicTacToeGame game = new TicTacToeGame();
+        game.initializeGame();
+        System.out.println("Winner of game is:" + game.startGame());
+    }
+
     /**
      * Method to initialize tic-tac-toe game
      */
