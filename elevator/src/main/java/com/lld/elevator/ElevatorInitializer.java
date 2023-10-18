@@ -10,6 +10,9 @@ import java.util.List;
 @Service
 public class ElevatorInitializer {
 
+    /**
+     * Method to initialize elevator
+     */
     public ElevatorInitializer() {
         List<Floor> floorList = new ArrayList<>();
         Floor floor1 = new Floor(1);
