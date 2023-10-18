@@ -9,6 +9,13 @@ import java.util.Deque;
 import java.util.LinkedList;
 
 public class Game {
+
+    static {
+        System.out.println("In Game method!");
+        Game gameObj = new Game();
+        gameObj.startGame();
+    }
+
     private Board board;
     private Dice dice;
     private Deque<Player> playerList;
