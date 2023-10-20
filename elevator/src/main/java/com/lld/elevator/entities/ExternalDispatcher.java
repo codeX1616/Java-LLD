@@ -8,10 +8,10 @@ public class ExternalDispatcher {
 
     private List<ElevatorController> elevatorControllerList = ElevatorCreator.elevatorControllerList;
 
-    public void submitExternalRequest(Integer floorNumber, Direction direction) {
+    public void submitExternalRequest(Integer floor, Direction direction) {
         for(ElevatorController elevatorController : elevatorControllerList) {
 
-            int elevatorID = elevatorController.elevatorCar.id;
+            int elevatorID = elevatorController.getElevatorCar().getId();
             if (elevatorID%2==1 && floor%2==1){
                 elevatorController.submitExternalRequest(floor,direction);
             } else if(elevatorID%2==0 && floor%2==0){
