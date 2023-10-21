@@ -8,4 +8,3 @@ import java.util.List;
 public class ElevatorCreator {
     public static List<ElevatorController> elevatorControllerList;
 }
-gi
