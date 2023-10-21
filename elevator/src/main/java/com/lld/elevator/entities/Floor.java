@@ -1,5 +1,7 @@
 package com.lld.elevator.entities;
 
+import com.lld.elevator.controller.ExternalDispatcher;
+
 public class Floor {
 
     private final Integer floorNumber;
