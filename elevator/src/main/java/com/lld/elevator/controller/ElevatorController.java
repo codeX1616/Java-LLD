@@ -16,6 +16,10 @@ public class ElevatorController {
     private ElevatorCar elevatorCar;
 
     public void submitExternalRequest(Integer floor, Direction direction) {
-
+        if(direction == Direction.DOWN) {
+            downMaxPQ.offer(floor);
+        } else {
+            upMinPQ.offer(floor);
+        }
     }
 }
