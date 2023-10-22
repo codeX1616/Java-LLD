@@ -22,4 +22,17 @@ public class ElevatorController {
             upMinPQ.offer(floor);
         }
     }
+
+    public void submitInternalRequest(int floor){
+        // Submit internal request
+    }
+
+    public void controlElevator(){
+        while(true) {
+            if(elevatorCar.getElevatorDirection() == Direction.UP){
+                // Logic to move elevator up, break the loop once the floor is reached!
+            }
+        }
+    }
+
 }
