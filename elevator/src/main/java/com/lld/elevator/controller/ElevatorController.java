@@ -15,6 +15,13 @@ public class ElevatorController {
     private PriorityQueue<Integer> downMaxPQ;
     private ElevatorCar elevatorCar;
 
+    ElevatorController(ElevatorCar elevatorCar){
+        this.elevatorCar = elevatorCar;
+        upMinPQ = new PriorityQueue<>();
+        downMaxPQ = new PriorityQueue<>((a,b) -> b-a);
+    }
+
+
     public void submitExternalRequest(Integer floor, Direction direction) {
         if(direction == Direction.DOWN) {
             downMaxPQ.offer(floor);
