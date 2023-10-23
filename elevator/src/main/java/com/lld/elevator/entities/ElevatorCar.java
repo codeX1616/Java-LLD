@@ -13,7 +13,4 @@ public class ElevatorCar {
     private int currentFloor;
     private Direction elevatorDirection;
     private ElevatorDoor elevatorDoor;
-
-
-
 }
