@@ -35,9 +35,11 @@ public class ElevatorController {
     }
 
     public void controlElevator(){
-        while(true) {
+        Boolean condition = true;
+        while(condition) {
             if(elevatorCar.getElevatorDirection() == Direction.UP){
                 // Logic to move elevator up, break the loop once the floor is reached!
+                condition = false;
             }
         }
     }
