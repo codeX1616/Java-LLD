@@ -1,6 +1,6 @@
 package com.lld.elevator.entities;
 
-import com.lld.elevator.controller.ExternalDispatcher;
+import com.lld.elevator.dispatcher.ExternalDispatcher;
 
 public class Floor {
 
