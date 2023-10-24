@@ -1,4 +1,6 @@
 package com.lld.elevator.entities;
 
-public class ElevatorState {
+public enum ElevatorState {
+    MOVING,
+    IDLE;
 }
