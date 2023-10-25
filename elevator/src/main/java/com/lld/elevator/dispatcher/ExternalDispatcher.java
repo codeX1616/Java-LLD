@@ -10,6 +10,11 @@ public class ExternalDispatcher {
 
     private final List<ElevatorController> elevatorControllerList = ElevatorCreator.elevatorControllerList;
 
+    /**
+     * Method to submit external request
+     * @param floor {@link Integer}
+     * @param direction {@link Direction}
+     */
     public void submitExternalRequest(Integer floor, Direction direction) {
         for(ElevatorController elevatorController : elevatorControllerList) {
 
