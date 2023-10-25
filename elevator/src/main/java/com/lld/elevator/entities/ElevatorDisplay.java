@@ -14,6 +14,9 @@ public class ElevatorDisplay {
         this.direction = direction;
     }
 
+    /**
+     * Method to show display
+     */
     public void showDisplay(){
         System.out.println(floor);
         System.out.println(direction);
