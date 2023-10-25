@@ -21,7 +21,11 @@ public class ElevatorController {
         downMaxPQ = new PriorityQueue<>((a,b) -> b-a);
     }
 
-
+    /**
+     * Method to submit external request
+     * @param floor
+     * @param direction
+     */
     public void submitExternalRequest(Integer floor, Direction direction) {
         if(direction == Direction.DOWN) {
             downMaxPQ.offer(floor);
@@ -30,10 +34,17 @@ public class ElevatorController {
         }
     }
 
+    /**
+     * Method to submit internal request
+     * @param floor
+     */
     public void submitInternalRequest(int floor){
         // Submit internal request
     }
 
+    /**
+     * Method to control elevator
+     */
     public void controlElevator(){
         Boolean condition = true;
         while(condition) {
