@@ -9,6 +9,11 @@ public class InternalButtons {
     Integer[] availableButtons = {1,2,3,4,5,6,7,8,9,10};
     int buttonSelected;
 
+    /**
+     * Method to peform button press action
+     * @param destination {@link Integer}
+     * @param elevatorCar {@link ElevatorCar}
+     */
     public void pressButton(Integer destination, ElevatorCar elevatorCar) {
 
         //1.check if destination is in the list of available floors
