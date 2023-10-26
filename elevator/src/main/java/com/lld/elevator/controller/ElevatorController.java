@@ -36,9 +36,9 @@ public class ElevatorController {
 
     /**
      * Method to submit internal request
-     * @param floor
+     * @param floor {@link Integer}
      */
-    public void submitInternalRequest(int floor){
+    public void submitInternalRequest(Integer floor){
         // Submit internal request
     }
 
