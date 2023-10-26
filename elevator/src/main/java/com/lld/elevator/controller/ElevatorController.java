@@ -23,8 +23,8 @@ public class ElevatorController {
 
     /**
      * Method to submit external request
-     * @param floor
-     * @param direction
+     * @param floor {@link Integer}
+     * @param direction {@link Direction}
      */
     public void submitExternalRequest(Integer floor, Direction direction) {
         if(direction == Direction.DOWN) {
