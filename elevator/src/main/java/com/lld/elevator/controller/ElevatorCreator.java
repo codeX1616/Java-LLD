@@ -11,7 +11,6 @@ public class ElevatorCreator {
     public static List<ElevatorController> elevatorControllerList;
 
     static {
-
         ElevatorCar elevatorCar1 = new ElevatorCar();
         elevatorCar1.setId(1);
         ElevatorController controller1 = new ElevatorController(elevatorCar1);
