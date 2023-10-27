@@ -15,6 +15,10 @@ public class ElevatorController {
     private PriorityQueue<Integer> downMaxPQ;
     private ElevatorCar elevatorCar;
 
+    /**
+     * ElevatorController constructor
+     * @param elevatorCar
+     */
     ElevatorController(ElevatorCar elevatorCar){
         this.elevatorCar = elevatorCar;
         upMinPQ = new PriorityQueue<>();
