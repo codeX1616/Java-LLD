@@ -17,7 +17,7 @@ public class ElevatorController {
 
     /**
      * ElevatorController constructor
-     * @param elevatorCar
+     * @param elevatorCar {@link ElevatorCar}
      */
     ElevatorController(ElevatorCar elevatorCar){
         this.elevatorCar = elevatorCar;
