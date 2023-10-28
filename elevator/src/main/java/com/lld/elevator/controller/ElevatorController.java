@@ -7,6 +7,10 @@ import lombok.Setter;
 
 import java.util.PriorityQueue;
 
+/**
+ * Controller class for Elevator
+ * @author codeX1616
+ */
 @Getter
 @Setter
 public class ElevatorController {
