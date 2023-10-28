@@ -6,6 +6,10 @@ import com.lld.elevator.entities.ElevatorCar;
 
 import java.util.List;
 
+/**
+ * Internal Dispatcher class
+ * @author codeX1616
+ */
 public class InternalDispatcher {
 
     List<ElevatorController> elevatorControllerList = ElevatorCreator.elevatorControllerList;
