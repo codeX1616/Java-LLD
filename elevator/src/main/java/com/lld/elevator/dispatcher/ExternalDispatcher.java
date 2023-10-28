@@ -6,6 +6,10 @@ import com.lld.elevator.entities.Direction;
 
 import java.util.List;
 
+/**
+ * External dispatcher class
+ * @author codeX1616
+ */
 public class ExternalDispatcher {
 
     private final List<ElevatorController> elevatorControllerList = ElevatorCreator.elevatorControllerList;
