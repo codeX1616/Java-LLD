@@ -5,6 +5,10 @@ import lombok.Getter;
 
 import java.util.List;
 
+/**
+ * Elevator creator class
+ * @author codeX1616
+ */
 @Getter
 public class ElevatorCreator {
 
