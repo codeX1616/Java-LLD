@@ -6,6 +6,10 @@ import lombok.Setter;
 
 import java.util.List;
 
+/**
+ * Building class to store floorList details and perform operations on Floors
+ * @author codeX1616
+ */
 @Getter
 @Setter
 @AllArgsConstructor
