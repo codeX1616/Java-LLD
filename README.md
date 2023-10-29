@@ -5,4 +5,5 @@ Java Low Level Design problems with solutions using Java and Spring Boot
 2. Car Rental System
 3. Elevator
 4. Snake And Ladde
-5. Tic Tac Toe Game
+5. Splitwise
+6. Tic Tac Toe Game
