@@ -8,6 +8,8 @@ public class SplitwiseApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(SplitwiseApplication.class, args);
+		SplitWise splitWise = new SplitWise();
+		splitWise.demo();
 	}
 
 }
