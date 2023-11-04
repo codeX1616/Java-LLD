@@ -2,10 +2,12 @@ package com.example.splitwise.entity.expense;
 
 import com.example.splitwise.entity.expense.split.Split;
 import com.example.splitwise.entity.user.User;
+import lombok.AllArgsConstructor;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@AllArgsConstructor
 public class Expense {
     private String expenseId;
     private String description;
