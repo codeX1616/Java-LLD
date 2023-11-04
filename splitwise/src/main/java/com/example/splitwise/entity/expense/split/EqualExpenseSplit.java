@@ -6,7 +6,13 @@ public class EqualExpenseSplit implements ExpenseSplit {
 
     @Override
     public void validateSplitRequest(List<Split> splitList, double totalAmount) {
-        // TODO - Add logic for validating split request
+        double amountShouldBePresent = totalAmount/splitList.size();
+        for(Split split: splitList) {
+            if(split.getAmountOwe() != amountShouldBePresent) {
+                //throw exception
+            }
+        }
+
     }
 
 }
