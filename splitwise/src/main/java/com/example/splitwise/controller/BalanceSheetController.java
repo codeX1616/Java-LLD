@@ -38,7 +38,13 @@ public class BalanceSheetController {
 
     }
 
-    public void updateUserExpenseBalanceSheet(User expensePaidBy, List<Split> splits, double totalExpenseAmount){
+    /**
+     * Controller method to update user expense balance sheet
+     * @param expensePaidBy {@link User}
+     * @param splits {@link List<Split>}
+     * @param totalExpenseAmount {@link Double}
+     */
+    public void updateUserExpenseBalanceSheet(User expensePaidBy, List<Split> splits, Double totalExpenseAmount){
 
         //update the total amount paid of the expense paid by user
         UserExpenseBalanceSheet paidByUserExpenseSheet = expensePaidBy.getUserExpenseBalanceSheet();
