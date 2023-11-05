@@ -8,6 +8,10 @@ import java.util.Map;
 
 public class BalanceSheetController {
 
+    /**
+     * Controller method to show balance sheet of user
+     * @param user {@link User}
+     */
     public void showBalanceSheetOfUser(User user){
 
         System.out.println("---------------------------------------");
