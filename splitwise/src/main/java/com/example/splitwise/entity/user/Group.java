@@ -2,6 +2,8 @@ package com.example.splitwise.entity.user;
 
 import com.example.splitwise.controller.ExpenseController;
 import com.example.splitwise.entity.expense.Expense;
+import com.example.splitwise.entity.expense.ExpenseSplitType;
+import com.example.splitwise.entity.expense.split.Split;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -28,5 +30,12 @@ public class Group {
         groupMembers.add(member);
     }
 
+    public Expense createExpense(String expenseId, String description, double expenseAmount,
+                                 List<Split> splitDetails, ExpenseSplitType splitType, User paidByUser) {
+
+        Expense expense = expenseController.createExpense(expenseId, description, expenseAmount, splitDetails, splitType, paidByUser);
+        expenseList.add(expense);
+        return expense;
+    }
 
 }
