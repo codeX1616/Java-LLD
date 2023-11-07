@@ -11,13 +11,13 @@ public class ExpenseController {
 
     /**
      * Controller method to create expense
-     * @param expenseId
-     * @param description
-     * @param expenseAmount
-     * @param splitDetails
-     * @param splitType
-     * @param paidByUser
-     * @return
+     * @param expenseId {@link String}
+     * @param description {@link String}
+     * @param expenseAmount {@link Double}
+     * @param splitDetails {@link List<Split>}
+     * @param splitType {@link ExpenseSplitType}
+     * @param paidByUser {@link User}
+     * @return {@link Expense}
      */
     public Expense createExpense(String expenseId, String description, Double expenseAmount, List<Split> splitDetails, ExpenseSplitType splitType, User paidByUser) {
         // TODO - Add logic to create expense
