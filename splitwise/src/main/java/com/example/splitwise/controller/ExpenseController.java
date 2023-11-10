@@ -4,6 +4,7 @@ import com.example.splitwise.entity.expense.Expense;
 import com.example.splitwise.entity.expense.ExpenseSplitType;
 import com.example.splitwise.entity.expense.split.ExpenseSplit;
 import com.example.splitwise.entity.expense.split.Split;
+import com.example.splitwise.entity.expense.split.SplitFactory;
 import com.example.splitwise.entity.user.User;
 
 import java.util.List;
@@ -29,7 +30,7 @@ public class ExpenseController {
         ExpenseSplit expenseSplit = SplitFactory.getSplitObject(splitType);
         expenseSplit.validateSplitRequest(splitDetails, expenseAmount);
 
-        Expense expense = new Expense(expenseId, expenseAmount, description, paidByUser, splitType, splitDetails);
+        Expense expense = new Expense(expenseId, description, expenseAmount, paidByUser, splitType, splitDetails);
 
         balanceSheetController.updateUserExpenseBalanceSheet(paidByUser, splitDetails, expenseAmount);
 
