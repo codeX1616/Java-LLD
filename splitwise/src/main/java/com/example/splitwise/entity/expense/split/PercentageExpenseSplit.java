@@ -2,7 +2,7 @@ package com.example.splitwise.entity.expense.split;
 
 import java.util.List;
 
-public class UnequalSplitRequest implements ExpenseSplit {
+public class PercentageExpenseSplit implements ExpenseSplit {
 
     @Override
     public void validateSplitRequest(List<Split> splitList, Double totalAmount) {
