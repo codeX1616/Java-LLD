@@ -28,5 +28,18 @@ public class GroupController {
         groupList.add(group);
     }
 
+    public Group getGroup(String groupId){
+
+        for(Group group: groupList) {
+
+            if(group.getGroupId().equals(groupId)){
+                return group;
+            }
+        }
+        return null;
+    }
+
+
+
 
 }
