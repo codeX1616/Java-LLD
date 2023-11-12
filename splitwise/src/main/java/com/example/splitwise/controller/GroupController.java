@@ -1,6 +1,7 @@
 package com.example.splitwise.controller;
 
 import com.example.splitwise.entity.user.Group;
+import com.example.splitwise.entity.user.User;
 
 import java.util.ArrayList;
 import java.util.List;
