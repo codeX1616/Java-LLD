@@ -20,7 +20,7 @@ public class Group {
     private List<Expense> expenseList;
     ExpenseController expenseController;
 
-    Group(){
+    public Group(){
         groupMembers = new ArrayList<>();
         expenseList = new ArrayList<>();
         expenseController = new ExpenseController();
