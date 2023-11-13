@@ -22,5 +22,17 @@ public class UserController {
         userList.add(user);
     }
 
+    public User getUser(String userID) {
+        for (User user : userList) {
+            if (user.getUserId().equals(userID)) {
+                return user;
+            }
+        }
+        return null;
+    }
+
+    public List<User> getAllUsers(){
+        return userList;
+    }
 
 }
