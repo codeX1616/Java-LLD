@@ -2,10 +2,14 @@ package com.example.splitwise.controller;
 
 import com.example.splitwise.entity.user.Group;
 import com.example.splitwise.entity.user.User;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Getter
+@Setter
 public class GroupController {
 
     private List<Group> groupList;
@@ -14,6 +18,12 @@ public class GroupController {
         groupList = new ArrayList<>();
     }
 
+    /**
+     * Controller method to create new group
+     * @param groupId {@link String}
+     * @param groupName {@link String}
+     * @param createdByUser {@link User}
+     */
     public void createNewGroup(String groupId, String groupName, User createdByUser) {
 
         //create a new group
