@@ -28,10 +28,13 @@ public class GroupController {
         groupList.add(group);
     }
 
+    /**
+     * Controller method to get group
+     * @param groupId {@link String}
+     * @return {@link Group}
+     */
     public Group getGroup(String groupId){
-
         for(Group group: groupList) {
-
             if(group.getGroupId().equals(groupId)){
                 return group;
             }
