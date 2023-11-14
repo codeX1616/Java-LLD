@@ -17,11 +17,19 @@ public class UserController {
         userList = new ArrayList<>();
     }
 
-    //add user
+    /**
+     * Controller method to add user
+     * @param user {@link User}
+     */
     public void addUser(User user) {
         userList.add(user);
     }
 
+    /**
+     * Controller method to get User
+     * @param userID {@link String}
+     * @return {@link User}
+     */
     public User getUser(String userID) {
         for (User user : userList) {
             if (user.getUserId().equals(userID)) {
@@ -31,6 +39,10 @@ public class UserController {
         return null;
     }
 
+    /**
+     * Controller method to get all users
+     * @return {@link List<User>}
+     */
     public List<User> getAllUsers(){
         return userList;
     }
