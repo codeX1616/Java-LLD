@@ -26,10 +26,24 @@ public class Group {
         expenseController = new ExpenseController();
     }
 
+    /**
+     * Method to add member
+     * @param member {@link User}
+     */
     public void addMember(User member){
         groupMembers.add(member);
     }
 
+    /**
+     * Method to create expense
+     * @param expenseId {@link String}
+     * @param description {@link String}
+     * @param expenseAmount {@link double}
+     * @param splitDetails {@link List<Split>}
+     * @param splitType {@link ExpenseSplitType}
+     * @param paidByUser {@link User}
+     * @return {@link Expense}
+     */
     public Expense createExpense(String expenseId, String description, double expenseAmount,
                                  List<Split> splitDetails, ExpenseSplitType splitType, User paidByUser) {
 
