@@ -5,7 +5,7 @@ import java.util.List;
 public class UnequalExpenseSplit implements ExpenseSplit {
 
     /**
-     * Method to validate split request
+     * Method to validate unequal expense split
      * @param splitList {@link List<Split>}
      * @param totalAmount {@link Double}
      */
