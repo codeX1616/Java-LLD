@@ -18,6 +18,9 @@ public class SplitWise {
         balanceSheetController = new BalanceSheetController();
     }
 
+    /**
+     * demo method for splitwise
+     */
     public void demo() {
         // TODO - Add logic
     }
