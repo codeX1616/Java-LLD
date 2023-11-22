@@ -4,6 +4,7 @@ import com.example.splitwise.controller.BalanceSheetController;
 import com.example.splitwise.controller.GroupController;
 import com.example.splitwise.controller.UserController;
 import com.example.splitwise.entity.user.Group;
+import com.example.splitwise.entity.user.User;
 import com.example.splitwise.entity.expense.split.Split;
 import lombok.AllArgsConstructor;
 
@@ -47,6 +48,10 @@ public class SplitWise {
         splits2.add(splits2_1);
         splits2.add(splits2_2);
         group.createExpense("Exp1002", "Lunch", 500, splits2, ExpenseSplitType.UNEQUAL, userController.getUser("U2001"));
+
+        for(User user : userController.getAllUsers()) {
+            balanceSheetController.showBalanceSheetOfUser(user);
+        }
 
     }
 
