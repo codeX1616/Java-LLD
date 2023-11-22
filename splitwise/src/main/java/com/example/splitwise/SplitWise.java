@@ -22,6 +22,9 @@ public class SplitWise {
      * demo method for splitwise
      */
     public void demo() {
-        // TODO - Add logic
+        setupUserAndGroup();
+    }
+
+    private void setupUserAndGroup() {
     }
 }
