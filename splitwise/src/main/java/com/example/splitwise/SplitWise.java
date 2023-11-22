@@ -41,6 +41,13 @@ public class SplitWise {
         splits.add(split3);
         group.createExpense("Exp1001", "Breakfast", 900, splits, ExpenseSplitType.EQUAL, userController.getUser("U1001"));
 
+        List<Split> splits2 = new ArrayList<>();
+        Split splits2_1 = new Split(userController.getUser("U1001"), 400);
+        Split splits2_2 = new Split(userController.getUser("U2001"), 100);
+        splits2.add(splits2_1);
+        splits2.add(splits2_2);
+        group.createExpense("Exp1002", "Lunch", 500, splits2, ExpenseSplitType.UNEQUAL, userController.getUser("U2001"));
+
     }
 
     private void setupUserAndGroup() {
