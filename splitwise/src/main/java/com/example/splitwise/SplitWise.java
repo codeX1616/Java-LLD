@@ -55,6 +55,9 @@ public class SplitWise {
 
     }
 
+    /**
+     * Method to set up user and group details
+     */
     private void setupUserAndGroup() {
         addUsersToSplitwiseApp();
 
