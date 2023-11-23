@@ -57,6 +57,10 @@ public class SplitWise {
 
     private void setupUserAndGroup() {
         addUsersToSplitwiseApp();
+
+        User user1 = userController.getUser("U1001");
+        groupController.createNewGroup("G1001", "Outing with Friends", user1);
+
     }
 
     private void addUsersToSplitwiseApp() {
