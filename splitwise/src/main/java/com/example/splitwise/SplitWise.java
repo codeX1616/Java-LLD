@@ -78,5 +78,9 @@ public class SplitWise {
         //adding User3
         User user3 = new User ("U3001", "User3");
 
+        userController.addUser(user1);
+        userController.addUser(user2);
+        userController.addUser(user3);
+
     }
 }
