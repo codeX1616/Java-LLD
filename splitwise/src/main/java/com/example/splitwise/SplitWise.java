@@ -67,6 +67,9 @@ public class SplitWise {
 
     }
 
+    /**
+     * Method to add users to splitwise app
+     */
     private void addUsersToSplitwiseApp() {
 
         //adding User1
