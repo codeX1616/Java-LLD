@@ -1,7 +1,7 @@
 package com.example.splitwise.entity.expense.split;
 
 import java.util.List;
-import com.example.splitwise.entity.expense.split.Split
+import com.example.splitwise.entity.expense.split.Split;
 
 public interface ExpenseSplit {
 
